@@ -6,7 +6,7 @@ import numpy as np
 
 
 folder = 'data/'
-show_resize = 2
+show_resize = 4
 print(os.getcwd())              #返回当前工作目录
 
 
@@ -69,6 +69,14 @@ def find_contours(filename):
             rect.starty = min(x[0][1], rect.starty)
             rect.endy = max(x[0][1], rect.endy)
         rect_list.append(rect)
+        '''
+        #动态打印轮廓
+        img = cv2.drawContours(result, i, -1, (0, 0, 255), 10)
+        img_show(img,  window_name='contours',  resize=show_resize)        
+        '''
+    #打印全部轮廓
+    img = cv2.drawContours(result, contours, -1, (0, 255, 0), 10)
+    img_show(img, window_name='contours', resize=show_resize)
 
     '''avg_height = get_avg_height_or_width(rect_list)
     print('avg_height',avg_height)
@@ -91,7 +99,7 @@ def thre(filename, is_adapteive=False, thre_value=95):
         # result = cv2.adaptiveThreshold(src, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 195, 50)
         #输入图 超小阈值赋的值 值域的操作方法 二值化操作类型 分块大小 常数项
         ret, result = cv2.threshold(src, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)   
-        #输入图 阈值 超过或小于阈值赋的值 选择类型
+        #输入图 阈值 超过或小于阈值赋的值 选择类型 otsu可自动寻找合适阈值
         
     else:
         retval, result = cv2.threshold(src, thre_value, 255, cv2.THRESH_BINARY)
@@ -108,7 +116,7 @@ def img_show(src, window_name='defoult', resize=show_resize):
     '''
     res = cv2.resize(src, (int(src.shape[1] // resize), int(src.shape[0] // resize)), interpolation=cv2.INTER_CUBIC)
     cv2.imshow(window_name, res)
-    cv2.waitKey(1500)                                                  #使窗口始终保持
+    cv2.waitKey(500)                                                  #使窗口始终保持
 
 
 if __name__ == '__main__':
