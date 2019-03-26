@@ -4,3 +4,5 @@
 环境配置要求：  
 ubuntu环境下:  
 opencv v4.0.0.21
+
+image util3 用opencv检测文本已经可以使用
