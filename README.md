@@ -1,8 +1,13 @@
 # OCR-learnning
-这是个学习别人零碎项目片段，然后运行的项目。copy过来只做学习用，甚至不一定能运行，后期整理集成到自己代码
+这是个学习别人零碎项目片段，然后运行的项目。为了学习，本人主要是跑通代码，并添加大量注释。
+copy过来不一定能运行，后期整理集成到自己代码
 
 环境配置要求：  
 ubuntu环境下:  
 opencv v4.0.0.21
 
-image util3 用opencv检测文本已经可以使用
+1. image util3 ：用opencv检测文本已经可以使用
+来源 ：师兄的代码
+
+2. nms.py  | predict.py 
+来源 ：advanceEAST 
