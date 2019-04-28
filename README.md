@@ -11,3 +11,4 @@ opencv v4.0.0.21
 
 2. nms.py  | predict.py 
 来源 ：advanceEAST 
+https://github.com/huoyijie/AdvancedEAST
