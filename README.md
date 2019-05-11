@@ -12,3 +12,7 @@ opencv v4.0.0.21
 2. nms.py  | predict.py 
 来源 ：advanceEAST 
 https://github.com/huoyijie/AdvancedEAST
+
+3.folder prepar/ | dataset/
+来源：CTPN（TF版本）
+https://github.com/eragonruan/text-detection-ctpn
