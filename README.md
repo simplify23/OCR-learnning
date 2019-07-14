@@ -16,3 +16,5 @@ https://github.com/huoyijie/AdvancedEAST
 3.folder prepar/ | dataset/
 来源：CTPN（TF版本）
 https://github.com/eragonruan/text-detection-ctpn
+
+因为cython编译复杂,很容易出错,所以把原版的ctpn/lib的utils已编译文件上传
